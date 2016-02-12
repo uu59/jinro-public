@@ -1,0 +1,19 @@
+@require "mixin"
+
+.vote_box
+  &__targets
+    //button()
+
+    &__target
+      cursor: pointer
+      &:hover
+        background-color: #333
+
+    &__head
+      padding: 0 1em
+
+    &, &--selected
+      display: inline-block
+      &__target
+        padding: 1em 1ex
+        imageInlineBlock()

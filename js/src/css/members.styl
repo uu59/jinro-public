@@ -1,0 +1,43 @@
+@require "colors"
+
+.room
+  &__body__sidebar
+    border-block-separation(border-right)
+    word-break: break-all
+    padding: 1em
+    width: 12em
+    max-width: 12em
+
+.members
+  &__header
+    display: flex
+    margin-bottom: 1em
+
+    &__joinleave
+      flex: 1
+      margin: auto
+    &__count
+      flex: 1
+      margin: auto
+      text-align: right
+  &__start
+    display: block
+    margin-top: 1em
+    > *
+      color: white !important
+
+  .member
+    &__image
+      width: 28px
+      height: 32px
+      img
+        image()
+        padding-right: 6px
+        display: block
+  &__names
+    table(middle)
+    line-height: 1.6
+    &__member
+      &--died
+        opacity: 0.6
+        text-decoration: line-through

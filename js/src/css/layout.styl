@@ -1,0 +1,22 @@
+html, body, #app
+  height: 100%
+
+#app
+  height: 100vh
+  display: flex
+  flex-direction: column
+  position: relative
+  .app__header
+    flex: 0 1 auto
+    align-self: stretch
+  .app__main
+    min-height: 10px
+    flex: 1 1 auto
+    align-self: stretch
+  .app__notifications
+    position: fixed
+    top: 1em
+    right: 1em
+
+.main
+  display: flex

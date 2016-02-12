@@ -1,0 +1,10 @@
+- startボタン
+- redisの設定
+- ヘルプ
+- /rooms
+- /rooms/:id 404の処理
+- 4人以外の役割配分
+- 霊能者のテスト
+- 狩人の追加
+- roomのvisitors追加
+- User.systemの名前をなんかラジオっぽいものに

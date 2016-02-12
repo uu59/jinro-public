@@ -1,0 +1,78 @@
+# vim: set ft=ruby:
+
+create_table "external_accounts" do |t|
+  t.integer "user_id", null: false
+  t.string "provider", null: false
+  t.string "uid", null: false
+  t.string "nickname", null: false
+  t.string "image", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+add_index :external_accounts, [:provider, :uid], unique: true
+add_index :external_accounts, [:user_id]
+
+
+create_table "users" do |t|
+  t.string "name", null: false, length: 140
+  t.string "image", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+
+create_table "sessions" do |t|
+  t.string "unique_id", null: false
+  t.text "body_json", null: false
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+add_index :sessions, [:unique_id], unique: true
+add_index :sessions, [:created_at]
+
+create_table "rooms" do |t|
+  t.string "name", null: false, length: 140
+  t.string "secret_token", null: false
+  t.json "options", null: false, default: {}
+  t.string "state", null: false, default: "prologue"
+  t.integer "created_by", null: false
+  t.string "role_pattern_key"
+  t.datetime "started_at"
+  t.datetime "archived_at"
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+end
+add_index :rooms, [:state]
+add_index :rooms, [:role_pattern_key]
+
+create_table "scenes" do |t|
+  t.integer "room_id", null: false
+  t.integer "prev_scene_id"
+  t.string "type", null: false
+  t.boolean "finished", null: false, default: false
+  t.integer "vote_avoided_count", null: false, default: 0
+  t.datetime "created_at", null: false
+end
+add_index :scenes, [:room_id]
+add_index :scenes, [:finished]
+
+create_table "votes" do |t|
+  t.integer "scene_id", null: false
+  t.integer "from_citizen_id", null: false
+  t.integer "to_citizen_id", null: false
+  t.boolean "avoided", null: false, default: false
+  t.datetime "created_at", null: false
+end
+add_index :votes, [:scene_id]
+add_index :votes, [:from_citizen_id]
+
+
+create_table "citizens" do |t|
+  t.integer "room_id", null: false
+  t.integer "user_id", null: false
+  t.integer "role_id", null: false
+  t.boolean "alive", null: false, default: true
+  t.datetime "created_at", null: false
+end
+add_index :citizens, [:room_id]
+add_index :citizens, [:user_id]
+add_index :citizens, [:room_id, :user_id], unique: true

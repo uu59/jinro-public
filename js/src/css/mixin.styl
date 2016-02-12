@@ -1,0 +1,71 @@
+nospace()
+  margin: 0
+  padding: 0
+  
+image(px = 24px)
+  width: px
+  height: px
+
+imageInlineBlock(height = 24px)
+  display: inline-block
+  > *
+    line-height: height
+    vertical-align: middle
+  img
+    padding-right: 4px
+
+imagewrap()
+  display: flex
+  > *
+    margin: auto 0
+  img
+    margin: auto 2px auto 0
+    image()
+
+table(align = top)
+  display: table
+  > *
+    table-row(align)
+
+table-row(align = top)
+  display: table-row
+  > *
+    display: table-cell
+    vertical-align: align
+
+button(type = primary)
+  background-color: #444
+  border: none
+  display: inline-block;
+  padding: 4px 10px;
+  text-align: center;
+  border-radius: 2px;
+  white-space: nowrap;
+  color: #C4B5AE;
+  cursor: pointer;
+  letter-spacing: 1px
+  &:hover
+    color: white
+
+clearfix()
+  &:after
+    content: ""
+    display: block
+    clear: both
+
+whitearea()
+  background-color: white-area-bg
+  color: white-area-fg
+
+ligherarea()
+  background-color: lighter-bg
+  color: lighter-text-color
+
+border-block-separation(direction = border-right)
+  direction: 1px solid (side-color - 8%)
+
+disable-select()
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none

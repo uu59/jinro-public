@@ -1,0 +1,35 @@
+.room-list
+  width: 100%
+  height: 100%
+  padding: 2em 0
+  display: flex
+  ligherarea()
+
+  > *
+    whitearea()
+    padding: 1em
+    box-sizing: border-box
+    border-radius: 3px
+    width: 45%
+    margin: 0 auto
+    overflow: auto
+
+  &__active, &__archived
+    h1
+      margin: 0
+      padding: 0
+
+  &__active
+    input[type=submit]
+      margin-left: 4px
+    &__member
+      display: block
+      > *
+        display: inline-block
+        padding-left: 3px
+  .link-wrapper
+    display: block
+    padding: 1ex 0
+    a
+      color: white-area-fg
+      display: inline-block

@@ -1,0 +1,99 @@
+# http://www7a.biglobe.ne.jp/~kuri/start.htm
+# http://werewolf.ddo.jp/cast.jsp?p=kind
+# http://jinrou.dip.jp/~jinrou/nofox.html
+
+4:
+  A:
+    human: 2
+    wolf: 1
+    uranai: 1
+5:
+  A:
+    human: 3
+    wolf: 1
+    uranai: 1
+  B:
+    human: 1
+    wolf: 1
+    uranai: 1
+    reinou: 1
+    fullmooner: 1
+  C:
+    human: 2
+    wolf: 1
+    uranai: 1
+    guard: 1
+6:
+  A:
+    human: 4
+    wolf: 1
+    uranai: 1
+  B:
+    human: 3
+    wolf: 1
+    reinou: 1
+    uranai: 1
+  C:
+    human: 4
+    wolf: 1
+    guard: 1
+7:
+  A:
+    human: 5
+    wolf: 1
+    uranai: 1
+  B:
+    human: 3
+    wolf: 1
+    uranai: 1
+    reinou: 1
+    guard: 1
+  C:
+    human: 2
+    wolf: 1
+    uranai: 1
+    reinou: 1
+    guard: 1
+    fullmooner: 1
+8:
+  A:
+    human: 4
+    wolf: 2
+    uranai: 1
+    reinou: 1
+  B:
+    human: 5
+    wolf: 2
+    uranai: 1
+  C:
+    human: 1
+    wolf: 2
+    uranai: 1
+    reinou: 1
+    fullmooner: 1
+    lovers: 2
+9:
+  A:
+    human: 5
+    wolf: 2
+    uranai: 1
+    reinou: 1
+10:
+  A:
+    human: 6
+    wolf: 2
+    uranai: 1
+    fullmooner: 1
+  B:
+    human: 5
+    wolf: 2
+    uranai: 1
+    reinou: 1
+    fullmooner: 1
+11:
+  A:
+    human: 6
+    wolf: 2
+    uranai: 1
+    fullmooner: 1
+    guard: 1

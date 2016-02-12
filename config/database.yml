@@ -1,0 +1,20 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: jinro_dev
+  host: localhost
+  username: postgres
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: jinro_test
+  host: localhost
+  username: postgres
+  password: pass
+
+production:
+  adapter: postgresql
+  encoding: utf8
+  database: jinro_prod
+  username: postgres

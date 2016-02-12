@@ -1,0 +1,27 @@
+@require "mixin"
+@require "colors"
+
+@require "layout"
+@require "common"
+
+@require "header"
+@require "footer"
+@require "notfound"
+@require "room"
+@require "room_role_list"
+@require "room_list"
+@require "members"
+@require "vote_box"
+@require "notifications"
+@require "timer"
+
+html,body,p,ul,li,ol,div
+  nospace()
+
+html
+  font-size: small
+  line-height: 1.3
+
+.header
+  &--loggedin
+    @extend .header;

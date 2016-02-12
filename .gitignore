@@ -1,0 +1,9 @@
+/js/build/
+/js/assets/
+/js/node_modules/
+/js/archive/
+/tmp/
+/public/
+/log/
+/.env
+/assets.tar.gz

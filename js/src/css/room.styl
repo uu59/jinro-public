@@ -1,0 +1,128 @@
+.room
+  flex: 1
+  flex-direction: column
+  display: flex
+  &__header
+    flex: 0 1 auto
+    height: 2em
+  &__body
+    display: flex
+    flex: 1 1 auto
+    flex-direction: row
+    &__chat
+      display: flex
+      flex: 1
+      flex-direction: column
+      &__form
+        min-height: 6em
+        line-height: 6em
+        flex: 0 1 auto
+      &__messages
+        height: 0
+        padding-bottom: 1ex
+        align-self: stretch
+        white-space: pre
+        font-family: sans-serif
+        border-collapse: collapse
+        flex: 1 1 auto
+        overflow: auto
+        position: relative
+
+.room
+  &__body__sidebar
+    background: lighter-bg
+  .messages
+    .message
+      &.side--wolf
+        .message__content__head
+          color: #820404
+      &.visitor
+        .message__content__head
+          opacity: 0.4
+          font-weight: normal
+      &.ghost
+        .message__content__head__name
+          text-decoration: line-through
+
+    &__message
+      &--prologue, &--epilogue
+        whitearea()
+      &--night
+        background-color: #b0b0b0
+      &--evening
+        background-color: #fffffb
+
+.room_information
+  disable-select()
+  background-color: #3C3034
+  background-color: #4C3B41
+  padding: 1em
+  &__errors
+    padding-top: 1em
+    color: red
+
+.message
+  table-row(top)
+
+  &__image
+    width: 32px
+    height: 32px
+    padding: 4px 1em 4px
+
+  &__content
+    width: 100%
+    padding-top: 4px
+    padding-bottom: 1em
+    &__head
+      font-size: small
+      margin-bottom: 4px
+      .actions
+        visibility: hidden
+        ^[0]:hover &
+          visibility: visible
+        > *
+          color: #999
+          font-size: 16px
+          padding-left: 3px
+        .fa
+          cursor: pointer
+          &:hover
+            color: black
+      &__timestamp
+        font-size: x-small
+        color: #666
+    &__body
+      margin-top: 1ex
+
+
+  &__body
+    &__name
+      font-weight: bold
+      padding-right: 4px
+
+
+.chatform
+  min-height: 3em
+  display: flex
+
+.fancy-textarea
+  display: flex
+  width: 100%
+  padding: 1em 2em
+  flex-direction: row
+  max-height: 12em
+
+  p
+    flex: 0 1 auto
+    margin: auto
+    border-top: 1px solid #999
+  textarea
+    whitearea()
+    border: 1px solid #999
+    border-radius: 2px
+    flex: 1
+    margin: auto
+    &:focus
+      outline: none
+    &:disabled
+      background-color: #d0d0d0
